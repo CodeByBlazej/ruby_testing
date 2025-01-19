@@ -44,11 +44,11 @@ describe Dog do
 
   # remove the 'x' before running this test
   it 'is not barking' do
-    expect(jack.barking?).to be false
+    expect(jack).to_not be_barking
   end
 
   # remove the 'x' before running this test
   it 'is sleeping' do
-    expect(jack.sleeping?).to be true
+    expect(jack).to be_sleeping
   end
 end
