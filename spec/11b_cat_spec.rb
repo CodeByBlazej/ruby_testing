@@ -44,11 +44,11 @@ describe Cat do
 
   # remove the 'x' before running this test
   it 'is not hungry' do
-    expect(hilary.hungry?).to be false
+    expect(hilary).to_not be_hungry
   end
 
   # remove the 'x' before running this test
   it 'is hiding' do
-    expect(hilary.hiding?).to be true
+    expect(hilary).to be_hiding
   end
 end
