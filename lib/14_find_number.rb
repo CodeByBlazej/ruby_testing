@@ -13,6 +13,19 @@ class FindNumber
   end
 
   def make_guess
-    @guess = (max - min) / 2
+    @guess = (max + min) / 2
+  end
+
+  def game_over?
+    return true if @answer == @guess
+  end
+
+  def update_range
+    if @guess < @answer
+      make_guess
+      @min = @min + 1
+    elsif @guess > @answer
+      @max = @max - 1
+    end
   end
 end
