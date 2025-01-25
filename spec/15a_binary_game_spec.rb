@@ -173,16 +173,22 @@ describe BinaryGame do
     # Note: #verify_input will only return a number if it is between?(min, max)
 
     context 'when given a valid input as argument' do
-      before do
-      end
-      
-      xit 'returns valid input' do
-
+      it 'returns valid input' do
+        min = game_verify.instance_variable_get(:@minimum)
+        max = game_verify.instance_variable_get(:@maximum)
+        input = 3
+        verified = game_verify.verify_input(min, max, input)
+        expect(verified).to eq(input)
       end
     end
 
     context 'when given invalid input as argument' do
-      xit 'returns nil' do
+      it 'returns nil' do
+        min = game_verify.instance_variable_get(:@minimum)
+        max = game_verify.instance_variable_get(:@maximum)
+        input = 12
+        verified = game_verify.verify_input(min, max, input)
+        expect(verified).to be nil
       end
     end
   end
