@@ -21,10 +21,6 @@ class FindNumber
   end
 
   def update_range
-    if @guess < @answer
-      @min = @guess + 1
-    elsif @guess > @answer
-      @max = @guess - 1
-    end
+    guess < answer ? @min = guess + 1 : @max = guess - 1
   end
 end
